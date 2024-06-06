@@ -23,4 +23,4 @@ UIOptions.load
 input_song = UIOptions.input_layout == :input_chords_above ? InputSongChordsAbove.new : InputSongChordsInline.new
 song = SongHolder.new(input_song)
 song.transpose
-UIOptions.output_layout == :output_chords_inline ? song.chords_inline : song.chords_above
+UIOptions.output_layout == :output_chords_inline ? song.show_chords_inline : song.show_chords_above

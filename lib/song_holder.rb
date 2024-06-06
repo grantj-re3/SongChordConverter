@@ -9,12 +9,12 @@ class SongHolder
     @lines = input_song.parse       # List of Line objects (subclasses of Line)
   end
 
-  def chords_inline
+  def show_chords_inline
     @lines.each{|line| puts line.to_s_inline}
   end
 
   # FIXME
-  def chords_above
+  def show_chords_above
   end
 
   def transpose
