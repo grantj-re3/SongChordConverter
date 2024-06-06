@@ -1,5 +1,6 @@
 # Require local project files
 require 'transposer'
+require 'config'
 
 ##############################################################################
 class Chord

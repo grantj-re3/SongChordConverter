@@ -1,5 +1,6 @@
 # Require local project files
 require 'chord'
+require 'config'
 
 ##############################################################################
 class LineSegment

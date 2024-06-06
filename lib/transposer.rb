@@ -1,4 +1,6 @@
 require 'yaml'
+require 'error_out'
+require 'config'
 
 ##############################################################################
 class Transposer

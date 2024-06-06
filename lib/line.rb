@@ -1,5 +1,6 @@
 # Require local project files
 require 'line_segment'
+require 'config'
 
 ##############################################################################
 class Line

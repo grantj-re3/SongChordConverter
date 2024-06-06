@@ -1,5 +1,7 @@
 # Require local project files
 require 'line'
+require 'error_out'
+require 'config'
 
 ##############################################################################
 class InputSongChordsAbove

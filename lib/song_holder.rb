@@ -1,6 +1,7 @@
 # Require local project files
 require 'line'
 require 'transposer'
+require 'config'
 
 ##############################################################################
 class SongHolder
