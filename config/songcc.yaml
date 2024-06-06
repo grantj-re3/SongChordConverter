@@ -1,0 +1,34 @@
+# songcc.yaml
+
+inline_chord_prefix: "["
+inline_chord_suffix: "]"
+
+# An array of strings which will be converted into regular expressions (i.e. regex).
+# Each regex must define what is permitted for the whole line to be interpreted as
+# an instruction, hence is expected to be of the form '^ ... $'
+# It is important to identify instructions:
+# - so they are not confused with chords,
+#   Eg1.: "Chorus" looks like a chord with root note "C" and extension "horus"
+#   Eg2.: "BRIDGE" looks like a chord with root note "B" and extension "RIDGE"
+# - so they are not confused with lyric lines, which may cause a problem if
+#   there are chords on the line above and the program attempts to insert those
+#   chords inline. E.g. result "[Am]Cho[Em]rus"
+instruction_regex_strings:
+  # Keywords (e.g. "CHORUS" or "Repeat") with optional ":" & optional white space.
+  - '^\s*(Chorus|CHORUS)\s*:?\s*$'
+  - '^\s*(Bridge|BRIDGE)\s*:?\s*$'
+  - '^\s*(Repeat|REPEAT)\s*:?\s*$'
+  - '^\s*(Verse|VERSE)\s*:?\s*$'
+  # Verse/VERSE can be followed by optional white space & 1 or more digits & optional ":".
+  # E.g. "Verse 2", "VERSE2:"
+  - '^\s*(Verse\s*\d+|VERSE\s*\d+)\s*:?\s*$'
+
+# E.g. Fm/Bb means Fm chord with Bb bass note, where the separator is '/'.
+bass_note_input_separator:  '/'
+bass_note_output_separator: '/'
+
+# The regex string(s) below must not contain:
+# - white space, e.g. \s, ' ', tab, etc.
+# - anchors '^' or '$'
+# because they will be added as required within the program
+no_chord_regex_string: 'N\.?C\.?|No-?[Cc]hord'
