@@ -1,0 +1,30 @@
+# This is a custom file for describing how you want to display the root note
+# (or bass note if applicable) of each chord.
+#
+# RULES
+# - There must be 12 lines representing each semitone of the chromatic scale.
+# - The first line shall represent the note 'A', the second line shall represent
+#   the note 'A#' (or 'Bb') etc., until the 12th line which represents 'G#'
+#   (or 'Ab').
+# - Together, the 12 notes must form a YAML-sequence in this file. This can be
+#   achieved as follows:
+#   * Each line must have a hyphen against the left margin, one or more spaces
+#     followed by the note you wish to display.
+#   * The note you wish to display can use UTF-8 unicode characters.
+#   * The note you wish to display is expected to be 1 or 2 characters long
+#     (but longer is probably okay).
+#   * The note can be followed by optional spaces, a hash character (#) and
+#     arbitary comment text.
+- A
+- B           # Bb in Western nomenclature is represented in German nomenclature by B
+- H           # B  in Western nomenclature is represented in German nomenclature by H
+- C
+- Db
+- D
+- Eb
+- E
+- F
+- Gb
+- G
+- Ab
+
